@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src:  url('../fonts/Raleway/Raleway-Regular.ttf');
+}
+
+html, body {
+	background: black;
+	height: 100%;
+	margin: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  color: white;
+	top: 50%;
+	width: 100%;
+	position: absolute;
+	transform: translateY(-50%);
+  text-align: center;
+  opacity: 0;
+  animation: opacity linear 7000ms forwards 500ms;
+}
+
+h1 {
+	text-align: center;
+  display: inline-block;
+  margin: 0;
+  margin-right: 5px;
+}
+
+.loading {
+  font-size: 30px;
+  color: white;
+  position: absolute;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  -webkit-animation: ellipsis steps(4, end) 7000ms infinite 7000ms;
+  animation: ellipsis steps(4, end) 7000ms infinite 7000ms;
+  content: "...";
+  width: 0px;
+  vertical-align: middle;
+  letter-spacing: 3px;
+  font-size: larger;
+  transform: translateY(-8%);
+
+}
+
+@keyframes opacity {
+  to {
+    opacity: 1
+  }
+}
+@-webkit-keyframes opacity {
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1em;
+  }
+}
