@@ -22,8 +22,7 @@ html, body {
 h1 {
   text-align: center;
   display: inline-block;
-  margin: 0;
-  margin-right: 5px; }
+  margin: 3em; }
 
 .loading {
   font-size: 30px;
