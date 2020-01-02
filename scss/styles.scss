@@ -49,6 +49,22 @@ h1 {
 
 }
 
+.bingoDiv {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color:
+    #ffffff3b;
+    font-size: small;
+    padding: 10px;
+    opacity: 0;
+    animation: opacity linear 7000ms forwards 5000ms;
+
+    a {
+        color: inherit;
+    }
+}
+
 @keyframes opacity {
   to {
     opacity: 1
