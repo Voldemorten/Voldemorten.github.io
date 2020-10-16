@@ -1,89 +1,92 @@
+$base-color: #f7aaa1;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
 @font-face {
-    font-family: 'Raleway';
+    font-family: "Raleway";
     font-style: normal;
     font-weight: 400;
-    src:  url('../fonts/Raleway/Raleway-Regular.ttf');
+    src: url("../fonts/Raleway/Raleway-Regular.ttf");
 }
 
-html, body {
-	background: black;
-	height: 100%;
-	margin: 0;
-  font-family: 'Raleway', sans-serif;
+html,
+body {
+    // height: 100%;
 }
 
-.container {
-  color: white;
-	top: 50%;
-	width: 100%;
-	position: absolute;
-	transform: translateY(-50%);
-  text-align: center;
-  opacity: 0;
-  animation: opacity linear 7000ms forwards 500ms;
+* {
+    // font-family: 'Space Mono', monospace, "Raleway", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1 {
-	text-align: center;
-  display: inline-block;
-	margin: 3em;
+a {
+  text-decoration: none;
+  color: $base-color;
+
+  &:hover {
+    color: rgba($base-color, 0.5);
+  }
 }
 
-.loading {
-  font-size: 30px;
-  color: white;
-  position: absolute;
+.story-introduction {
+    font-size: 2em;
 }
 
-.loading:after {
-  overflow: hidden;
-  display: inline-block;
-  -webkit-animation: ellipsis steps(4, end) 7000ms infinite 7000ms;
-  animation: ellipsis steps(4, end) 7000ms infinite 7000ms;
-  content: "...";
-  width: 0px;
-  vertical-align: middle;
-  letter-spacing: 3px;
-  font-size: larger;
-  transform: translateY(-8%);
-
+.story-ending {
+  font-size: 1.2em;
 }
 
-.bingoDiv {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    color:
-    #ffffff3b;
-    font-size: small;
-    padding: 10px;
-    opacity: 0;
-    animation: opacity linear 7000ms forwards 5000ms;
+.story-point {
+    display: table-row;
 
-    a {
-        color: inherit;
+    .year {
+        position: relative;
+        display: table-cell;
+        text-align: right;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 1.3rem;
+            width: 3rem;
+            background: #f7aaa1;
+            height: 0.2rem;
+            right: 0;
+        }
+    }
+
+    .content {
+        padding: 0 0 0.75rem 1rem;
+        // text-align: justify;
     }
 }
 
-@keyframes opacity {
-  to {
-    opacity: 1
-  }
-}
-@-webkit-keyframes opacity {
-  to {
-    opacity: 1
-  }
-}
+.img-wrapper {
+    img {
+        width: 100%;
+    }
 
-@keyframes ellipsis {
-  to {
-    width: 1em;
-  }
-}
+    // smaller on ipad
+    @media (min-width: $md) and (max-width: $lg) {
+        img {
+          width: 75%;
+        }
+    }
 
-@-webkit-keyframes ellipsis {
-  to {
-    width: 1em;
+    // and small on full width
+    @media (min-width: $xl) {
+      img {
+        width: 75%;
+      }
   }
+
+    div {
+        // position: absolute;
+        bottom: 1rem;
+        font-size: 0.6rem;
+        width: 100%;
+        text-align: right;
+    }
 }

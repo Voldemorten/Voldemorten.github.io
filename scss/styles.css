@@ -4,82 +4,65 @@
   font-weight: 400;
   src: url("../fonts/Raleway/Raleway-Regular.ttf");
 }
-html, body {
-  background: black;
-  height: 100%;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 
-.container {
-  color: white;
-  top: 50%;
-  width: 100%;
+a {
+  text-decoration: none;
+  color: #f7aaa1;
+}
+a:hover {
+  color: rgba(247, 170, 161, 0.5);
+}
+
+.story-introduction {
+  font-size: 2em;
+}
+
+.story-ending {
+  font-size: 1.2em;
+}
+
+.story-point {
+  display: table-row;
+}
+.story-point .year {
+  position: relative;
+  display: table-cell;
+  text-align: right;
+}
+.story-point .year:after {
+  content: "";
   position: absolute;
-  transform: translateY(-50%);
-  text-align: center;
-  opacity: 0;
-  animation: opacity linear 7000ms forwards 500ms;
-}
-
-h1 {
-  text-align: center;
-  display: inline-block;
-  margin: 3em;
-}
-
-.loading {
-  font-size: 30px;
-  color: white;
-  position: absolute;
-}
-
-.loading:after {
-  overflow: hidden;
-  display: inline-block;
-  -webkit-animation: ellipsis steps(4, end) 7000ms infinite 7000ms;
-  animation: ellipsis steps(4, end) 7000ms infinite 7000ms;
-  content: "...";
-  width: 0px;
-  vertical-align: middle;
-  letter-spacing: 3px;
-  font-size: larger;
-  transform: translateY(-8%);
-}
-
-.bingoDiv {
-  position: absolute;
-  bottom: 0;
+  top: 1.3rem;
+  width: 3rem;
+  background: #f7aaa1;
+  height: 0.2rem;
   right: 0;
-  color: #ffffff3b;
-  font-size: small;
-  padding: 10px;
-  opacity: 0;
-  animation: opacity linear 7000ms forwards 5000ms;
 }
-.bingoDiv a {
-  color: inherit;
+.story-point .content {
+  padding: 0 0 0.75rem 1rem;
 }
 
-@keyframes opacity {
-  to {
-    opacity: 1;
+.img-wrapper img {
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .img-wrapper img {
+    width: 75%;
   }
 }
-@-webkit-keyframes opacity {
-  to {
-    opacity: 1;
+@media (min-width: 1200px) {
+  .img-wrapper img {
+    width: 75%;
   }
 }
-@keyframes ellipsis {
-  to {
-    width: 1em;
-  }
-}
-@-webkit-keyframes ellipsis {
-  to {
-    width: 1em;
-  }
+.img-wrapper div {
+  bottom: 1rem;
+  font-size: 0.6rem;
+  width: 100%;
+  text-align: right;
 }
 
 /*# sourceMappingURL=styles.css.map */
