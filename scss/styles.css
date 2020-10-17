@@ -69,7 +69,7 @@ a:hover {
   text-align: center;
 }
 .images-container img {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
   border: 1px solid black;
   max-height: 500px;
   max-width: 100%;
