@@ -1,8 +1,8 @@
 $(() => {
-    $(function () {
-        $('[data-toggle="popover"]').popover({
-            // trigger: 'focus',
-            placement: 'bottom'
-        })
-      })
+    if($(".images-container").length) {
+        var bLazy = new Blazy({ 
+            selector: '.b-lazy', 
+            offset: 100 
+        });
+    }
 })

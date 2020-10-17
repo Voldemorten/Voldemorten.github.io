@@ -65,4 +65,26 @@ a:hover {
   text-align: right;
 }
 
+.images-container {
+  text-align: center;
+}
+.images-container img {
+  margin-bottom: 2rem;
+  border: 1px solid black;
+  max-height: 500px;
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+.images-container img:first-child {
+  margin-top: 2rem;
+}
+
+.back-button {
+  position: absolute;
+  margin-left: 1em;
+  top: 1em;
+  color: grey;
+}
+
 /*# sourceMappingURL=styles.css.map */

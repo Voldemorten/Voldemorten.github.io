@@ -18,16 +18,16 @@ body {
 
 * {
     // font-family: 'Space Mono', monospace, "Raleway", sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 a {
-  text-decoration: none;
-  color: $base-color;
+    text-decoration: none;
+    color: $base-color;
 
-  &:hover {
-    color: rgba($base-color, 0.5);
-  }
+    &:hover {
+        color: rgba($base-color, 0.5);
+    }
 }
 
 .story-introduction {
@@ -35,7 +35,7 @@ a {
 }
 
 .story-ending {
-  font-size: 1.2em;
+    font-size: 1.2em;
 }
 
 .story-point {
@@ -71,16 +71,16 @@ a {
     // smaller on ipad
     @media (min-width: $md) and (max-width: $lg) {
         img {
-          width: 75%;
+            width: 75%;
         }
     }
 
     // and small on full width
     @media (min-width: $xl) {
-      img {
-        width: 75%;
-      }
-  }
+        img {
+            width: 75%;
+        }
+    }
 
     div {
         // position: absolute;
@@ -89,4 +89,28 @@ a {
         width: 100%;
         text-align: right;
     }
+}
+
+.images-container {
+    text-align: center;
+
+    img {
+        margin-bottom: 2rem;
+        border: 1px solid black;
+        max-height: 500px;
+        max-width: 100%;
+        display: block;
+        margin: auto;
+
+        &:first-child {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.back-button {
+    position: absolute;
+    margin-left: 1em;
+    top: 1em;
+    color: grey;
 }
