@@ -67,7 +67,15 @@
                                 src="images/kyoto/compressed/kyoto${i}.jpg" />
                             </a>`
                         );
-                    } else {
+                    } else if(i === 11) {
+                        $(".images-container").append(
+                            `<a href="images/kyoto/full/kyoto${i}.JPG">
+                                <img class="b-lazy"
+                                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                                data-src="images/kyoto/compressed/kyoto${i}.JPG" />
+                            </a>`
+                        );
+                    }else {
                         $(".images-container").append(
                             `<a href="images/kyoto/full/kyoto${i}.jpg">
                                 <img class="b-lazy"
@@ -75,10 +83,6 @@
                                 data-src="images/kyoto/compressed/kyoto${i}.jpg" />
                             </a>`
                         );
-
-                    }
-                    if(i === 11) {
-                        console.log(11)
                     }
                 }
             });
