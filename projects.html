@@ -50,13 +50,20 @@
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
 
-        <title>MDL - Japan</title>
+        <title>MDL - Projects</title>
     </head>
 
     <body>
         <a href="/" class="back-button">← Back</a>
-        <h1 class="mt-5 text-center">Japan '19</h1>
-        <div class="container images-container"></div>
+        <h1 class="mt-5 text-center">
+            Projects
+            <span class="text-muted" style="font-size: small"
+                >(Work in progress)</span
+            >
+        </h1>
+        <div class="container projects-container mt-4">
+            <div class="row"></div>
+        </div>
         <!-- Optional JavaScript; choose one of the two! -->
 
         <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -71,39 +78,51 @@
             crossorigin="anonymous"
         ></script>
         <script src="lib/blazy.js"></script>
+        <script src="js/site.js"></script>
         <script>
             $(() => {
-                const noOfPhotos = 33;
-                for (let i = 1; i <= noOfPhotos; i++) {
-                    // don't lazy load first 2
-                    if (i < 3) {
-                        $(".images-container").append(
-                            `<a href="images/kyoto/full/kyoto${i}.jpg">
-                                <img class=""
-                                src="images/kyoto/compressed/kyoto${i}.jpg" />
-                            </a>`
-                        );
-                    } else if (i === 11) {
-                        $(".images-container").append(
-                            `<a href="images/kyoto/full/kyoto${i}.JPG">
-                                <img class="b-lazy"
-                                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-                                data-src="images/kyoto/compressed/kyoto${i}.JPG" />
-                            </a>`
-                        );
-                    } else {
-                        $(".images-container").append(
-                            `<a href="images/kyoto/full/kyoto${i}.jpg">
-                                <img class="b-lazy"
-                                src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-                                data-src="images/kyoto/compressed/kyoto${i}.jpg" 
-                            </a>`
-                        );
-                    }
-                }
+                $.getJSON("/data/projects.json", (data) => {
+                    data.projects.forEach((p) => {
+                        let el = `
+                                <div class="col-sm-4 mt-3">
+                                    <div class="card">
+                                        <img class="card-img-top" src="${
+                                            p.imgSrc
+                                        }" alt="Card image cap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">${
+                                                p.name
+                                            }</h5>
+                                            <p class="card-text">${
+                                                p.description
+                                            }</p>
+                                        </div>
+                                        <div class="card-links">
+                                            <a href="${
+                                                p.githubLink
+                                            }"><img src="/images/icons/GitHub_Logo.png"/></a>
+                                            ${
+                                                p.previewLink
+                                                    ? `<a class="btn my-btn ${
+                                                          p.previewLink.link
+                                                              ? ""
+                                                              : "disabled"
+                                                      } href="${
+                                                          p.previewLink.link
+                                                      }"}>${
+                                                          p.previewLink.name
+                                                      }</a>`
+                                                    : ""
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            `;
+                        $(".projects-container .row").append(el);
+                    });
+                });
             });
         </script>
-        <script src="js/site.js"></script>
         <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

@@ -10,10 +10,19 @@
 
 a {
   text-decoration: none;
-  color: #f7aaa1;
+  color: #ef8a7f;
 }
 a:hover {
-  color: rgba(247, 170, 161, 0.5);
+  color: rgba(239, 138, 127, 0.5);
+}
+
+.my-btn {
+  background-color: #ef8a7f;
+  color: white;
+}
+.my-btn:hover {
+  color: white;
+  background-color: rgba(239, 138, 127, 0.8);
 }
 
 .story-introduction {
@@ -80,11 +89,28 @@ a:hover {
   margin-top: 2rem;
 }
 
+.card {
+  height: 100%;
+}
+.card .card-links {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 1.25rem 1.25rem;
+  align-items: center;
+}
+.card .card-links img {
+  max-height: 1.5rem;
+}
+
 .back-button {
   position: absolute;
   margin-left: 1em;
   top: 1em;
   color: grey;
+}
+
+.row:last-child {
+  margin-bottom: 1.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

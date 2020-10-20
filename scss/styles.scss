@@ -1,4 +1,4 @@
-$base-color: #f7aaa1;
+$base-color: #ef8a7f;
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
@@ -28,6 +28,16 @@ a {
     &:hover {
         color: rgba($base-color, 0.5);
     }
+}
+
+.my-btn {
+  background-color: $base-color;
+  color: white;
+
+  &:hover {
+    color: white;
+    background-color: rgba($base-color, 0.8);
+  }
 }
 
 .story-introduction {
@@ -108,9 +118,29 @@ a {
     }
 }
 
+.card {
+    height: 100%;
+
+    .card-links {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0 1.25rem 1.25rem;
+        align-items: center;
+
+        img {
+          max-height: 1.5rem;
+          // vertical-align: bottom;
+        }
+    }
+}
+
 .back-button {
     position: absolute;
     margin-left: 1em;
     top: 1em;
     color: grey;
+}
+
+.row:last-child {
+    margin-bottom: 1.5rem;
 }

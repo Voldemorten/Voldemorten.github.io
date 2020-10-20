@@ -1,0 +1,30 @@
+{
+    "projects": [
+        {
+            "name": "Nodejs-mongodb template",
+            "description": "This is a nodejs template / skeleton / bootstrap repo (what ever you would call it), follow the architecture described in this <a href='https://dev.to/santypk4/bulletproof-node-js-project-architecture-4epf'>post</a>.",
+            "githubLink": "https://github.com/Voldemorten/nodejs-mongodb-backend-template",
+            "imgSrc":"/images/projects/mern-stack.jpg"
+        },
+        {
+            "name": "Bingo",
+            "description": "This is a small bingo project built with react, typescript and bootstrap",
+            "githubLink": "https://github.com/Voldemorten/nodejs-mongodb-backend-template",
+            "previewLink": {
+                "link": "https://voldemorten.github.io/bingo/",
+                "name": "Play"
+            },
+            "imgSrc":"/images/projects/bingo.jpg"
+        },
+        {
+            "name": "2048",
+            "description": "A simple 2048 game built in js",
+            "githubLink": "https://github.com/Voldemorten/2048-demo",
+            "previewLink": {
+                "link": "",
+                "name": "Coming soon"
+            },
+            "imgSrc":"/images/projects/2048.jpg"
+        }
+    ]
+}
